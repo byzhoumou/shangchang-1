@@ -57,6 +57,14 @@ const router = createRouter({
           component: () => import("@/views/menu/index.vue"),
           meta: { title: "我的" },
         },
+        {
+          // 一级路由
+          path: "/login",
+          name: "LoginIndex",
+          component: () => import("@/views/login/index.vue"),
+          // 设置路由标题
+          meta: { title: "登录" },
+        },
       ],
     },
   ],

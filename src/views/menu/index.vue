@@ -5,7 +5,7 @@
       <van-sidebar v-model="active" ref="tabRef" @change="tabActiveChange">
         <van-sidebar-item
           :title="'标签名称' + index"
-          v-for="index in 40"
+          v-for="index in 10"
           :key="index"
           @click="itemClickHandle(index - 1)"
           ref="tabItemRef"
@@ -14,7 +14,7 @@
       <div class="content-box" ref="contextRef">
         <div
           class="title-box"
-          v-for="index in 40"
+          v-for="index in 10"
           :key="index"
           ref="contextBoxItemRef"
         >
@@ -47,6 +47,9 @@ onMounted(() => {
   if (contextRef.value) {
     contextRef.value.addEventListener("scroll", contextScrollHandle);
   }
+  // console.log(contextRef.value);
+  // console.log("scroll");
+  // console.log(contextScrollHandle);
 });
 
 // 右侧内容区滚动时的处理函数
